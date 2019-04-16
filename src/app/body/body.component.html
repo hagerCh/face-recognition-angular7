@@ -1,0 +1,29 @@
+<div class="intro-section" id="home-section">
+  <div class="container">
+
+    <div class="row align-items-center">
+      <div class="col-lg-4 mr-auto" data-aos="fade-up">
+        <h1>Identify your picture .</h1>
+        <input type="link" placeholder="https://image-link" class="py-3 px-5" #link>
+        <button id="link" class="btn btn-outline-light py-3 px-5" (click)="linkPic(link.value)">Identify picture from link</button>
+        <p id="or">OR:</p>
+        <button id="camera" class="btn btn-outline-light py-3 px-5">Take a picture</button>
+      </div>
+      <div class="col-lg-2 ml-auto"  data-aos="fade-up" data-aos-delay="100">
+        <figure class="img-absolute">
+          <div id="rectangle" (mouseenter)="hoverList()" (mouseleave)="listBye()" >
+          </div>
+          <div id="list">
+            <ul>
+              <li><b>Gender:</b> {{gender}}</li>
+              <li><b>Age:</b> {{age}}</li>
+              <li><b>Glasses:</b> {{glasses}}</li>
+              <li><b>Emotions:</b> {{emotions}}</li>
+            </ul>
+          </div>
+          <img src={{imgUrl}} alt="Image" class="img-fluid" id="img" (click)="imageLoad($event)">
+        </figure>
+      </div>
+    </div>
+  </div>
+</div>
